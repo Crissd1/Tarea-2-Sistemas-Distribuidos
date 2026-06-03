@@ -20,7 +20,7 @@ def parse_timestamp(value: str) -> datetime:
 
 def percentile(values: list[float], percent: float) -> float:
     """
-    Calcula percentil.
+    Calcula percentil usando interpolación simple.
     """
     if not values:
         return 0.0
@@ -93,14 +93,19 @@ def calculate_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
     else:
         elapsed_seconds = 0.0
 
-    throughput = total_events / elapsed_seconds if elapsed_seconds > 0 else 0.0
-    retry_rate = sent_to_retry / total_events if total_events > 0 else 0.0
-    recovery_rate = (
-        recovered_from_retry / sent_to_retry if sent_to_retry > 0 else 0.0
-    )
-    dlq_rate = sent_to_dlq / sent_to_retry if sent_to_retry > 0 else 0.0
     successful_events = cache_hits + cache_miss_processed + recovered_from_retry
     failed_events = sent_to_retry + sent_to_dlq
+
+    throughput_events = total_events / elapsed_seconds if elapsed_seconds > 0 else 0.0
+    throughput_successful_queries = (
+        successful_events / elapsed_seconds if elapsed_seconds > 0 else 0.0
+    )
+
+    retry_rate = sent_to_retry / total_events if total_events > 0 else 0.0
+    recovery_rate = recovered_from_retry / sent_to_retry if sent_to_retry > 0 else 0.0
+    dlq_count = sent_to_dlq
+    dlq_rate = sent_to_dlq / len(unique_queries) if unique_queries else 0.0
+    failure_rate = failed_events / total_events if total_events > 0 else 0.0
 
     summary = {
         "total_events": total_events,
@@ -113,13 +118,16 @@ def calculate_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
         "recovered_from_retry": recovered_from_retry,
         "sent_to_dlq": sent_to_dlq,
         "elapsed_seconds": round(elapsed_seconds, 4),
-        "throughput_events_per_second": round(throughput, 4),
+        "throughput_events_per_second": round(throughput_events, 4),
+        "throughput_successful_queries_per_second": round(throughput_successful_queries, 4),
         "latency_avg_ms": round(mean(latencies), 4) if latencies else 0.0,
         "latency_p50_ms": round(median(latencies), 4) if latencies else 0.0,
         "latency_p95_ms": round(percentile(latencies, 0.95), 4) if latencies else 0.0,
         "retry_rate": round(retry_rate, 4),
         "recovery_rate": round(recovery_rate, 4),
+        "sent_to_dlq": sent_to_dlq,
         "dlq_rate": round(dlq_rate, 4),
+        "failure_rate": round(failure_rate, 4),
     }
 
     return summary
