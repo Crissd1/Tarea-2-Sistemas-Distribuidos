@@ -16,8 +16,8 @@ from kafka_config import (
 
 QUERY_TYPES = ["Q1", "Q2", "Q3", "Q4", "Q5"]
 ZONES = ["Z1", "Z2", "Z3", "Z4", "Z5"]
-CONFIDENCE_VALUES = [0.0, 0.25, 0.5, 0.75]
-BIN_VALUES = [5, 10, 15, 20]
+CONFIDENCE_VALUES = [0.0, 0.5, 0.7]
+BIN_VALUES = [5, 10]
 TRAFFIC_DISTRIBUTION = os.getenv("TRAFFIC_DISTRIBUTION", "uniform").lower()
 ZIPF_ALPHA = float(os.getenv("ZIPF_ALPHA", "1.2"))
 
