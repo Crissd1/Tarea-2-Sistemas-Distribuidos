@@ -30,10 +30,13 @@ def adapt_kafka_query(kafka_query: dict[str, Any]) -> dict[str, Any]:
     adapted_query: dict[str, Any] = {
         "query_type": query_type,
         "zone_id": kafka_query.get("zone"),
-        "confidence_min": params.get("confidence", 0.0),
     }
 
+    if query_type in ["Q1", "Q2", "Q3"]:
+        adapted_query["confidence_min"] = params.get("confidence", 0.0)
+
     if query_type == "Q4":
+        adapted_query["confidence_min"] = params.get("confidence", 0.0)
         adapted_query["zone_b"] = params.get("zone_b")
 
     if query_type == "Q5":
