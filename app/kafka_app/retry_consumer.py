@@ -1,6 +1,6 @@
 """
 Consumer de reintentos:
-Lee consultas desde retry-topic, intenta reprocesarlas y envía a DLQ aquellas que superan el máximo de reintentos permitido.
+Lee consultas desde retry-topic, intenta reprocesarlas y envía a DLQ las que superan el máximo de reintentos permitido.
 """
 import json
 import os
@@ -10,6 +10,7 @@ import time
 from pathlib import Path
 from typing import Any
 from kafka import KafkaConsumer, KafkaProducer
+from response_adapter import generate_response  
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(PROJECT_ROOT))
 from app.cache.redis_cache import (
@@ -25,10 +26,8 @@ from kafka_config import (
     TOPIC_RETRY,
 )
 
-
 RETRY_FAILURE_RATE = float(os.getenv("RETRY_FAILURE_RATE", "0.0"))
 RETRY_DELAY_SECONDS = float(os.getenv("RETRY_DELAY_SECONDS", "1.0"))
-
 
 def create_retry_consumer() -> KafkaConsumer:
     """
@@ -44,7 +43,6 @@ def create_retry_consumer() -> KafkaConsumer:
         value_deserializer=lambda value: json.loads(value.decode("utf-8")),
     )
 
-
 def create_producer() -> KafkaProducer:
     """
     Crea un producer para reenviar a retry-topic o enviar a DLQ.
@@ -55,30 +53,20 @@ def create_producer() -> KafkaProducer:
         value_serializer=lambda value: json.dumps(value).encode("utf-8"),
     )
 
-
 def should_fail() -> bool:
     """
     Determina si el reintento falla según la tasa configurada.
     """
     return random.random() < RETRY_FAILURE_RATE
 
-
-def simulate_response_generator(query: dict[str, Any]) -> dict[str, Any]:
+def process_with_response_generator(query: dict[str, Any]) -> dict[str, Any]:
     """
-    Simula el reprocesamiento de una consulta fallida.
+    Reprocesa una consulta usando el generador de respuestas.
     """
-    time.sleep(0.05)
     if should_fail():
-        raise RuntimeError("Falla simulada durante reintento")
+        raise RuntimeError("Falla durante reintento")
 
-    return {
-        "query_id": query.get("id"),
-        "query_type": query.get("query_type"),
-        "zone": query.get("zone"),
-        "params": query.get("params", {}),
-        "result": "simulated_response_after_retry",
-        "source": "retry_consumer",
-    }
+    return generate_response(query)
 
 def send_to_dlq(
     producer: KafkaProducer,
@@ -124,7 +112,6 @@ def send_back_to_retry(
     producer.flush()
     print(f"Consulta reenviada a retry-topic con retry_count={query['retry_count']}")
 
-
 def process_retry_message(
     query: dict[str, Any],
     producer: KafkaProducer,
@@ -134,7 +121,6 @@ def process_retry_message(
     """
     start_time = time.perf_counter()
     redis_client = create_redis_client()
-
     retry_count = int(query.get("retry_count", 0))
     cache_key = build_cache_key(query)
 
@@ -155,7 +141,7 @@ def process_retry_message(
     time.sleep(RETRY_DELAY_SECONDS)
 
     try:
-        response = simulate_response_generator(query)
+        response = process_with_response_generator(query)
         save_to_cache(redis_client, cache_key, response)
         latency_ms = (time.perf_counter() - start_time) * 1000
         log_event(
@@ -188,9 +174,6 @@ def process_retry_message(
             )
 
 def main() -> None:
-    """
-    Ejecuta el consumer de reintentos.
-    """
     consumer = create_retry_consumer()
     producer = create_producer()
     print(f"Retry consumer escuchando tópico '{TOPIC_RETRY}'")

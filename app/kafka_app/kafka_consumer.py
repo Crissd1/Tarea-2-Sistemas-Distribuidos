@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 from typing import Any
 from kafka import KafkaConsumer, KafkaProducer
+from response_adapter import generate_response
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(PROJECT_ROOT))
@@ -62,22 +63,14 @@ def should_fail() -> bool:
     """
     return random.random() < FAILURE_RATE
 
-def simulate_response_generator(query: dict[str, Any]) -> dict[str, Any]:
+def process_with_response_generator(query: dict[str, Any]) -> dict[str, Any]:
     """
-    Simula temporalmente el Generador de Respuestas.
+    Procesa una consulta usando el generador de respuestas.
     """
-    time.sleep(0.05)
     if should_fail():
-        raise RuntimeError("Falla simulada del Generador de Respuestas")
-    
-    return {
-        "query_id": query.get("id"),
-        "query_type": query.get("query_type"),
-        "zone": query.get("zone"),
-        "params": query.get("params", {}),
-        "result": "simulated_response",
-        "source": "response_generator_simulated",
-    }
+        raise RuntimeError("Falla del Generador de Respuestas")
+
+    return generate_response(query)
 
 def send_to_retry(
     producer: KafkaProducer,
@@ -138,7 +131,7 @@ def process_message(
     
     print("Resultado: CACHE MISS")
     try:
-        response = simulate_response_generator(message_value)
+        response = process_with_response_generator(message_value)
         save_to_cache(redis_client, cache_key, response)
         latency_ms = (time.perf_counter() - start_time) * 1000
         log_event(
