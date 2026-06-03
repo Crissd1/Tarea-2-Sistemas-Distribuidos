@@ -20,7 +20,7 @@ from app.cache.redis_cache import (
     get_from_cache,
     save_to_cache,
 )
-
+from app.metrics.metrics_collector import log_event
 from kafka_config import (
     CONSUMER_CLIENT_ID,
     CONSUMER_GROUP,
@@ -106,6 +106,7 @@ def process_message(
     """
     Procesa una consulta desde Kafka usando Redis como caché.
     """
+    start_time = time.perf_counter()
     redis_client = create_redis_client()
     query_id = message_value.get("id")
     query_type = message_value.get("query_type")
@@ -113,7 +114,6 @@ def process_message(
     retry_count = int(message_value.get("retry_count", 0))
     cache_key = build_cache_key(message_value)
     cached_response = get_from_cache(redis_client, cache_key)
-
     print("Consulta recibida correctamente")
     print(f"ID: {query_id}")
     print(f"Tipo: {query_type}")
@@ -124,13 +124,32 @@ def process_message(
     if cached_response is not None:
         print("Resultado: CACHE HIT")
         print(f"Respuesta desde Redis: {cached_response}")
+        latency_ms = (time.perf_counter() - start_time) * 1000
+        log_event(
+            event_type="cache_hit",
+            query=message_value,
+            cache_key=cache_key,
+            retry_count=retry_count,
+            latency_ms=latency_ms,
+            topic=TOPIC_QUERIES,
+            status="success",
+        )
         return
     
     print("Resultado: CACHE MISS")
     try:
         response = simulate_response_generator(message_value)
         save_to_cache(redis_client, cache_key, response)
-
+        latency_ms = (time.perf_counter() - start_time) * 1000
+        log_event(
+            event_type="cache_miss_processed",
+            query=message_value,
+            cache_key=cache_key,
+            retry_count=retry_count,
+            latency_ms=latency_ms,
+            topic=TOPIC_QUERIES,
+            status="success",
+        )
         print("Respuesta generada y almacenada en Redis")
         print(f"Respuesta: {response}")
 
@@ -145,6 +164,18 @@ def process_message(
             producer=retry_producer,
             query=message_value,
             error_message=str(error),
+        )
+        
+        latency_ms = (time.perf_counter() - start_time) * 1000
+        log_event(
+            event_type="sent_to_retry",
+            query=message_value,
+            cache_key=cache_key,
+            retry_count=message_value.get("retry_count", retry_count),
+            latency_ms=latency_ms,
+            topic=TOPIC_RETRY,
+            status="failed",
+            error=str(error),
         )
 
 def main() -> None:
