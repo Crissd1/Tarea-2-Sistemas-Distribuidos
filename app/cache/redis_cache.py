@@ -14,7 +14,7 @@ def create_redis_client() -> redis.Redis:
     )
 
 def build_cache_key(query: dict[str, Any]) -> str:
-
+    
     query_type = query.get("query_type")
     zone = query.get("zone")
     params = query.get("params", {})
@@ -26,7 +26,8 @@ def build_cache_key(query: dict[str, Any]) -> str:
 
     if query_type == "Q5":
         bins = params.get("bins", "none")
-        return f"{query_type}:zone={zone}:conf={confidence}:bins={bins}"
+        return f"{query_type}:zone={zone}:bins={bins}"
+
     return f"{query_type}:zone={zone}:conf={confidence}"
 
 def get_from_cache(redis_client: redis.Redis, cache_key: str) -> dict[str, Any] | None:
