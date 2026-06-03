@@ -17,7 +17,7 @@ from app.cache.redis_cache import (
     create_redis_client,
     save_to_cache,
 )
-
+from app.metrics.metrics_collector import log_event
 from kafka_config import (
     KAFKA_BOOTSTRAP_SERVERS,
     MAX_RETRIES,
@@ -96,6 +96,14 @@ def send_to_dlq(
         value=query,
     )
     producer.flush()
+    log_event(
+        event_type="sent_to_dlq",
+        query=query,
+        retry_count=query.get("retry_count", 0),
+        topic=TOPIC_DLQ,
+        status="failed",
+        error=error_message,
+    )
     print("Consulta enviada a DLQ")
 
 def send_back_to_retry(
@@ -124,6 +132,7 @@ def process_retry_message(
     """
     Procesa una consulta recibida desde retry-topic
     """
+    start_time = time.perf_counter()
     redis_client = create_redis_client()
 
     retry_count = int(query.get("retry_count", 0))
@@ -148,6 +157,16 @@ def process_retry_message(
     try:
         response = simulate_response_generator(query)
         save_to_cache(redis_client, cache_key, response)
+        latency_ms = (time.perf_counter() - start_time) * 1000
+        log_event(
+            event_type="recovered_from_retry",
+            query=query,
+            cache_key=cache_key,
+            retry_count=retry_count,
+            latency_ms=latency_ms,
+            topic=TOPIC_RETRY,
+            status="success",
+        )
         print("Consulta recuperada exitosamente desde retry-topic")
         print(f"Respuesta guardada en Redis: {response}")
 
