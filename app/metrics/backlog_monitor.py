@@ -5,6 +5,7 @@ Se puede ejecutar en modo 'watch' para medir el tiempo que tarda el backlog en v
 """
 import argparse
 import csv
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -14,17 +15,23 @@ from kafka import KafkaConsumer, TopicPartition
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 sys.path.append(str(PROJECT_ROOT))
 
-from app.kafka_app.kafka_config import (  # noqa: E402
+from app.kafka_app.kafka_config import (
     CONSUMER_GROUP,
     KAFKA_BOOTSTRAP_SERVERS,
     TOPIC_QUERIES,
-    TOPIC_RETRY,
 )
-RESULTS_DIR = PROJECT_ROOT / "results" / "tarea2"
+
+BASE_RESULTS_DIR = PROJECT_ROOT / "results" / "tarea2"
+EXPERIMENT_NAME = os.getenv("EXPERIMENT_NAME", "").strip()
+if EXPERIMENT_NAME:
+    RESULTS_DIR = BASE_RESULTS_DIR / EXPERIMENT_NAME
+else:
+    RESULTS_DIR = BASE_RESULTS_DIR
 BACKLOG_FILE = RESULTS_DIR / "backlog.csv"
 RECOVERY_FILE = RESULTS_DIR / "recovery_time.csv"
 BACKLOG_FIELDS = [
     "timestamp",
+    "experiment_name",
     "topic",
     "group_id",
     "partition",
@@ -35,6 +42,7 @@ BACKLOG_FIELDS = [
 ]
 RECOVERY_FIELDS = [
     "timestamp",
+    "experiment_name",
     "topic",
     "group_id",
     "recovery_time_seconds",
@@ -83,6 +91,7 @@ def calculate_lag(topic: str, group_id: str) -> tuple[int, list[dict[str, int | 
     """
     consumer = create_monitor_consumer(group_id)
     topic_partitions = get_topic_partitions(consumer, topic)
+
     if not topic_partitions:
         consumer.close()
         return 0, []
@@ -117,7 +126,7 @@ def calculate_lag(topic: str, group_id: str) -> tuple[int, list[dict[str, int | 
 
 def log_backlog_snapshot(topic: str, group_id: str) -> int:
     """
-    Guarda una medición de backlog en results/tarea2/backlog.csv
+    Guarda una medición de backlog en backlog.csv.
     """
     ensure_results_files()
     total_lag, rows = calculate_lag(topic, group_id)
@@ -125,11 +134,11 @@ def log_backlog_snapshot(topic: str, group_id: str) -> int:
 
     with BACKLOG_FILE.open("a", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=BACKLOG_FIELDS)
-
         if not rows:
             writer.writerow(
                 {
                     "timestamp": timestamp,
+                    "experiment_name": EXPERIMENT_NAME or "default",
                     "topic": topic,
                     "group_id": group_id,
                     "partition": "",
@@ -144,6 +153,7 @@ def log_backlog_snapshot(topic: str, group_id: str) -> int:
                 writer.writerow(
                     {
                         "timestamp": timestamp,
+                        "experiment_name": EXPERIMENT_NAME or "default",
                         "topic": row["topic"],
                         "group_id": row["group_id"],
                         "partition": row["partition"],
@@ -153,8 +163,8 @@ def log_backlog_snapshot(topic: str, group_id: str) -> int:
                         "total_lag": total_lag,
                     }
                 )
-
     print(f"[{timestamp}] topic={topic} group={group_id} total_lag={total_lag}")
+
     return total_lag
 
 def log_recovery_time(
@@ -173,6 +183,7 @@ def log_recovery_time(
         writer.writerow(
             {
                 "timestamp": datetime.now(timezone.utc).isoformat(),
+                "experiment_name": EXPERIMENT_NAME or "default",
                 "topic": topic,
                 "group_id": group_id,
                 "recovery_time_seconds": round(recovery_time_seconds, 4),
@@ -194,25 +205,26 @@ def watch_backlog(
     backlog_start_time = None
     max_lag_observed = 0
     saw_backlog = False
+
     while True:
         total_lag = log_backlog_snapshot(topic, group_id)
         max_lag_observed = max(max_lag_observed, total_lag)
-
         if total_lag > 0 and not saw_backlog:
             saw_backlog = True
             backlog_start_time = time.perf_counter()
             print("Backlog detectado. Iniciando recovery time.")
         if until_zero and saw_backlog and total_lag == 0:
             recovery_time = time.perf_counter() - backlog_start_time
-
             log_recovery_time(
                 topic=topic,
                 group_id=group_id,
                 recovery_time_seconds=recovery_time,
                 max_lag_observed=max_lag_observed,
             )
+
             print(f"Recovery time: {recovery_time:.4f} segundos")
             break
+
         elapsed = time.perf_counter() - monitor_start_time
         if elapsed >= max_seconds:
             print("Tiempo máximo de monitoreo alcanzado.")
@@ -256,6 +268,7 @@ def main() -> None:
         help="Tiempo máximo de monitoreo.",
     )
     args = parser.parse_args()
+
     if args.watch:
         watch_backlog(
             topic=args.topic,
