@@ -3,12 +3,20 @@ Análisis de métricas:
 Lee results/tarea2/events.csv y genera un resumen en results/tarea2/summary.csv con métricas de latencia, throughput, reintentos, recuperación y DLQ.
 """
 import csv
+import os
 from datetime import datetime
 from pathlib import Path
 from statistics import mean, median
 from typing import Any
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-RESULTS_DIR = PROJECT_ROOT / "results" / "tarea2"
+BASE_RESULTS_DIR = PROJECT_ROOT / "results" / "tarea2"
+EXPERIMENT_NAME = os.getenv("EXPERIMENT_NAME", "").strip()
+if EXPERIMENT_NAME:
+    RESULTS_DIR = BASE_RESULTS_DIR / EXPERIMENT_NAME
+else:
+    RESULTS_DIR = BASE_RESULTS_DIR
+
 EVENTS_FILE = RESULTS_DIR / "events.csv"
 SUMMARY_FILE = RESULTS_DIR / "summary.csv"
 
@@ -24,10 +32,11 @@ def percentile(values: list[float], percent: float) -> float:
     """
     if not values:
         return 0.0
-    sorted_values = sorted(values)
 
+    sorted_values = sorted(values)
     if len(sorted_values) == 1:
         return sorted_values[0]
+
     index = (len(sorted_values) - 1) * percent
     lower = int(index)
     upper = min(lower + 1, len(sorted_values) - 1)
@@ -104,10 +113,11 @@ def calculate_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
     retry_rate = sent_to_retry / total_events if total_events > 0 else 0.0
     recovery_rate = recovered_from_retry / sent_to_retry if sent_to_retry > 0 else 0.0
     dlq_count = sent_to_dlq
-    dlq_rate = sent_to_dlq / len(unique_queries) if unique_queries else 0.0
+    dlq_rate = dlq_count / len(unique_queries) if unique_queries else 0.0
     failure_rate = failed_events / total_events if total_events > 0 else 0.0
 
     summary = {
+        "experiment_name": EXPERIMENT_NAME or "default",
         "total_events": total_events,
         "total_queries": len(unique_queries),
         "successful_events": successful_events,
@@ -116,7 +126,6 @@ def calculate_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
         "cache_miss_processed": cache_miss_processed,
         "sent_to_retry": sent_to_retry,
         "recovered_from_retry": recovered_from_retry,
-        "sent_to_dlq": sent_to_dlq,
         "elapsed_seconds": round(elapsed_seconds, 4),
         "throughput_events_per_second": round(throughput_events, 4),
         "throughput_successful_queries_per_second": round(throughput_successful_queries, 4),
@@ -126,6 +135,7 @@ def calculate_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
         "retry_rate": round(retry_rate, 4),
         "recovery_rate": round(recovery_rate, 4),
         "sent_to_dlq": sent_to_dlq,
+        "dlq_count": dlq_count,
         "dlq_rate": round(dlq_rate, 4),
         "failure_rate": round(failure_rate, 4),
     }
@@ -134,7 +144,7 @@ def calculate_summary(events: list[dict[str, Any]]) -> dict[str, Any]:
 
 def write_summary(summary: dict[str, Any]) -> None:
     """
-    Guarda el resumen en results/tarea2/summary.csv.
+    Guarda el resumen en summary.csv.
     """
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -148,13 +158,16 @@ def print_summary(summary: dict[str, Any]) -> None:
     Muestra el resumen por consola.
     """
     print("\nResumen de métricas:")
-    print("\n")
+    print(f"Experimento: {EXPERIMENT_NAME or 'default'}")
+    print(f"Archivo leído: {EVENTS_FILE}")
+    print("")
 
     for key, value in summary.items():
         print(f"{key}: {value}")
 
-    print("\n")
+    print("")
     print(f"Resumen guardado en: {SUMMARY_FILE}")
+
 
 def main() -> None:
     events = read_events()
