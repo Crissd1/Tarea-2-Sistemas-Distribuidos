@@ -1,6 +1,6 @@
 """
 Registro de métricas del sistema:
-Guarda eventos en results/tarea2/events.csv para el análisis de latencia, throughput, reintentos, recuperación y DLQ.
+Guarda eventos en results/tarea2/events.csv o en una carpeta especìfica por experimento para el análisis de latencia, throughput, reintentos, recuperación y DLQ.
 """
 import csv
 import os
@@ -9,10 +9,18 @@ from pathlib import Path
 from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-RESULTS_DIR = PROJECT_ROOT / os.getenv("RESULTS_DIR", "results/tarea2")
+BASE_RESULTS_DIR = PROJECT_ROOT / "results" / "tarea2"
+EXPERIMENT_NAME = os.getenv("EXPERIMENT_NAME", "").strip()
+
+if EXPERIMENT_NAME:
+    RESULTS_DIR = BASE_RESULTS_DIR / EXPERIMENT_NAME
+else:
+    RESULTS_DIR = BASE_RESULTS_DIR
+
 EVENTS_FILE = RESULTS_DIR / "events.csv"
 EVENT_FIELDS = [
     "timestamp",
+    "experiment_name",
     "event_type",
     "query_id",
     "query_type",
@@ -27,10 +35,9 @@ EVENT_FIELDS = [
 
 def ensure_events_file() -> None:
     """
-    Crea results/tarea2/events.csv si no existe.
+    Crea el archivo events.csv en la carpeta de resultados correspondiente.
     """
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-
     if not EVENTS_FILE.exists():
         with EVENTS_FILE.open("w", newline="", encoding="utf-8") as file:
             writer = csv.DictWriter(file, fieldnames=EVENT_FIELDS)
@@ -47,11 +54,13 @@ def log_event(
     error: str = "",
 ) -> None:
     """
-    Registra un evento del sistema en results/tarea2/events.csv.
+    Registra un evento del sistema en events.csv.
     """
     ensure_events_file()
+
     row = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
+        "experiment_name": EXPERIMENT_NAME or "default",
         "event_type": event_type,
         "query_id": query.get("id", ""),
         "query_type": query.get("query_type", ""),
