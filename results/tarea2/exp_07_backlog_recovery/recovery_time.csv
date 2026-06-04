@@ -1,0 +1,2 @@
+timestamp,experiment_name,topic,group_id,recovery_time_seconds,max_lag_observed
+2026-06-04T02:53:14.978898+00:00,exp_07_backlog_recovery,queries-topic,query-consumers,20.0267,1000

@@ -1,0 +1,2 @@
+experiment_name,total_events,total_queries,successful_events,failed_events,cache_hits,cache_miss_processed,sent_to_retry,recovered_from_retry,elapsed_seconds,throughput_events_per_second,throughput_successful_queries_per_second,latency_avg_ms,latency_p50_ms,latency_p95_ms,retry_rate,recovery_rate,sent_to_dlq,dlq_count,dlq_rate,failure_rate
+exp_07_backlog_recovery,1000,1000,1000,0,898,102,0,0,5.4977,181.8951,181.8951,4.6086,3.6769,8.9945,0.0,0.0,0,0,0.0,0.0

@@ -1,0 +1,101 @@
+timestamp,experiment_name,event_type,query_id,query_type,zone,cache_key,retry_count,latency_ms,topic,status,error
+2026-06-04T02:45:30.265947+00:00,exp_06_dlq,sent_to_retry,e1c1b7cb-c060-42a2-a98e-97d21a7913ee,Q2,Z5,Q2:zone=Z5:conf=0.5,1,23.8587,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.295006+00:00,exp_06_dlq,sent_to_retry,4992f0cd-4f32-4dba-8419-a86f023f5874,Q1,Z1,Q1:zone=Z1:conf=0.0,1,16.8457,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.308687+00:00,exp_06_dlq,sent_to_retry,4c1799d1-79a9-40f6-9293-d318803e0e4b,Q2,Z2,Q2:zone=Z2:conf=0.0,1,13.1241,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.315255+00:00,exp_06_dlq,sent_to_retry,6d395caa-e4db-4a7f-9cc1-375e1ddcb5de,Q1,Z1,Q1:zone=Z1:conf=0.7,1,5.7486,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.324343+00:00,exp_06_dlq,sent_to_retry,5122b5b5-0ce4-4f32-83d6-6df3456f39f4,Q3,Z2,Q3:zone=Z2:conf=0.7,1,8.4669,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.330683+00:00,exp_06_dlq,sent_to_retry,4622ea8b-ade7-4679-97eb-89e99ef82f99,Q3,Z2,Q3:zone=Z2:conf=0.7,1,5.7876,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.337668+00:00,exp_06_dlq,sent_to_retry,b519c3a1-6c1b-4a17-a51d-104c07dad3c6,Q3,Z1,Q3:zone=Z1:conf=0.0,1,6.126,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.345548+00:00,exp_06_dlq,sent_to_retry,4557ee0c-02df-4b62-9a53-381fa187d580,Q4,Z2,Q4:zone=Z2:zone_b=Z4:conf=0.5,1,7.5311,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.355375+00:00,exp_06_dlq,sent_to_retry,62557ce9-ca4d-422d-8dbd-77c4153724f1,Q3,Z4,Q3:zone=Z4:conf=0.5,1,8.7346,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.364891+00:00,exp_06_dlq,sent_to_retry,7560fe64-1439-4ec1-ac06-969906d8f945,Q3,Z1,Q3:zone=Z1:conf=0.5,1,8.629,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.372030+00:00,exp_06_dlq,sent_to_retry,6f9555fb-5f94-46ea-9d5a-11f827edf1bd,Q5,Z1,Q5:zone=Z1:bins=5,1,6.5864,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.378706+00:00,exp_06_dlq,sent_to_retry,13c6e0be-7c6f-44ca-8fc6-27ee88c5ac8b,Q1,Z2,Q1:zone=Z2:conf=0.5,1,6.0968,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.386079+00:00,exp_06_dlq,sent_to_retry,5b350a80-fc3a-47a5-ae1b-1aa3cd6d70ca,Q1,Z4,Q1:zone=Z4:conf=0.7,1,6.7271,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.392024+00:00,exp_06_dlq,sent_to_retry,17987e33-8628-4577-82dc-c8e17a90059e,Q2,Z5,Q2:zone=Z5:conf=0.7,1,5.4387,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.398406+00:00,exp_06_dlq,sent_to_retry,e678c22b-a760-4ccb-953b-67cc2f656f8f,Q2,Z5,Q2:zone=Z5:conf=0.7,1,5.6677,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.404390+00:00,exp_06_dlq,sent_to_retry,d316d1ff-c3e1-40f0-bc00-eaae88a0a52c,Q2,Z1,Q2:zone=Z1:conf=0.5,1,5.3784,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.410348+00:00,exp_06_dlq,sent_to_retry,c0afbdf0-358e-478b-aab7-fcb64557cedd,Q2,Z2,Q2:zone=Z2:conf=0.7,1,5.4947,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.415769+00:00,exp_06_dlq,sent_to_retry,62c238b8-0d63-4e9a-8df8-bdb3a56f6794,Q5,Z2,Q5:zone=Z2:bins=10,1,4.9998,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.421627+00:00,exp_06_dlq,sent_to_retry,f027741b-e5f6-4320-9e71-d8e3b672afa5,Q1,Z4,Q1:zone=Z4:conf=0.0,1,5.4851,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.427115+00:00,exp_06_dlq,sent_to_retry,a8ced016-7445-45d4-8388-7038287d9e32,Q1,Z1,Q1:zone=Z1:conf=0.0,1,4.8744,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.435232+00:00,exp_06_dlq,sent_to_retry,8ff02235-8a07-467c-b20c-7e83f352e431,Q4,Z5,Q4:zone=Z5:zone_b=Z3:conf=0.0,1,7.4701,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.442045+00:00,exp_06_dlq,sent_to_retry,6a086ac0-1734-4c6e-8cd8-5d3cd9c44269,Q1,Z4,Q1:zone=Z4:conf=0.5,1,6.3044,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.448107+00:00,exp_06_dlq,sent_to_retry,fd731a2c-d7a4-40a2-b4de-4b3261a47d4a,Q3,Z3,Q3:zone=Z3:conf=0.7,1,5.522,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.453294+00:00,exp_06_dlq,sent_to_retry,90b2c4ee-c8fb-4ae1-83bf-1e298f288078,Q5,Z1,Q5:zone=Z1:bins=5,1,4.63,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.458598+00:00,exp_06_dlq,sent_to_retry,b3087dee-cc06-451c-b6c1-f07c45f1e72b,Q1,Z1,Q1:zone=Z1:conf=0.7,1,4.6919,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.466598+00:00,exp_06_dlq,sent_to_retry,42a6f38b-9166-497e-a353-b83b315cf2ce,Q3,Z2,Q3:zone=Z2:conf=0.5,1,7.0076,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.472050+00:00,exp_06_dlq,sent_to_retry,88d29205-9ba1-4fd4-9848-daeb50506d42,Q5,Z2,Q5:zone=Z2:bins=5,1,4.8772,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.477616+00:00,exp_06_dlq,sent_to_retry,1bc2d688-5a19-4adb-92b9-787361570336,Q2,Z2,Q2:zone=Z2:conf=0.5,1,4.9935,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.487904+00:00,exp_06_dlq,sent_to_retry,98e8c446-cd7b-469a-aa4f-36b96029b214,Q1,Z5,Q1:zone=Z5:conf=0.0,1,5.5436,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.492511+00:00,exp_06_dlq,sent_to_retry,79a26b05-6a70-412b-ad5a-669088cee187,Q4,Z4,Q4:zone=Z4:zone_b=Z2:conf=0.7,1,4.2431,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.498178+00:00,exp_06_dlq,sent_to_retry,def9f3da-34cf-44b7-af24-0f5e59566443,Q1,Z2,Q1:zone=Z2:conf=0.5,1,4.7445,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.504735+00:00,exp_06_dlq,sent_to_retry,362647a7-2d31-4124-b6ac-ea392d9ebbc3,Q1,Z2,Q1:zone=Z2:conf=0.5,1,5.8919,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.510166+00:00,exp_06_dlq,sent_to_retry,7705aafd-3169-4237-a047-d7f3919280e8,Q2,Z2,Q2:zone=Z2:conf=0.0,1,4.965,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.516806+00:00,exp_06_dlq,sent_to_retry,766356a8-b3d8-4776-a046-21d0f8410aaa,Q1,Z4,Q1:zone=Z4:conf=0.7,1,5.7967,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.521861+00:00,exp_06_dlq,sent_to_retry,88a1497d-466e-4e61-aa05-cecab32238f7,Q3,Z3,Q3:zone=Z3:conf=0.7,1,4.2746,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.528352+00:00,exp_06_dlq,sent_to_retry,56bc9778-9abe-42af-ad5b-e0f037317fe2,Q1,Z5,Q1:zone=Z5:conf=0.0,1,5.6261,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.534904+00:00,exp_06_dlq,sent_to_retry,3a463462-b63e-436b-9141-16805c873914,Q1,Z1,Q1:zone=Z1:conf=0.5,1,5.9875,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.541226+00:00,exp_06_dlq,sent_to_retry,488bcb07-0fd7-480d-a1dd-c5ac58e363fa,Q1,Z2,Q1:zone=Z2:conf=0.0,1,5.9608,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.549665+00:00,exp_06_dlq,sent_to_retry,d2a9e17b-d7c5-4174-96c6-3013e66efe72,Q1,Z2,Q1:zone=Z2:conf=0.7,1,7.9221,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.554555+00:00,exp_06_dlq,sent_to_retry,2cbb2ea2-951c-4931-8a6b-80cf31e97d8b,Q1,Z3,Q1:zone=Z3:conf=0.5,1,4.3306,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.558818+00:00,exp_06_dlq,sent_to_retry,c9e1202f-4880-497f-b82f-91184f858f86,Q1,Z2,Q1:zone=Z2:conf=0.5,1,3.7318,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.563680+00:00,exp_06_dlq,sent_to_retry,1e4ea356-8352-428c-943b-d3dc2bec7253,Q5,Z4,Q5:zone=Z4:bins=10,1,4.2287,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.569337+00:00,exp_06_dlq,sent_to_retry,a6510210-7f5f-4ccc-8a7b-1933092ac269,Q1,Z4,Q1:zone=Z4:conf=0.5,1,4.8297,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.574252+00:00,exp_06_dlq,sent_to_retry,c89fcbf4-d425-4894-ab60-74615719210e,Q3,Z2,Q3:zone=Z2:conf=0.5,1,4.6333,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.579461+00:00,exp_06_dlq,sent_to_retry,375f2b43-df94-4452-b0dd-9ba8cf32409d,Q1,Z1,Q1:zone=Z1:conf=0.7,1,4.3202,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.586257+00:00,exp_06_dlq,sent_to_retry,721e4361-7799-447c-919e-b152c7b8abf5,Q3,Z1,Q3:zone=Z1:conf=0.7,1,6.1294,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.592299+00:00,exp_06_dlq,sent_to_retry,e452bf18-0ea8-4caa-a20b-3c5012b49b27,Q1,Z1,Q1:zone=Z1:conf=0.7,1,5.6153,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.598766+00:00,exp_06_dlq,sent_to_retry,95b272ef-5d66-4353-b6cd-52f803873241,Q3,Z2,Q3:zone=Z2:conf=0.5,1,5.8518,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.605838+00:00,exp_06_dlq,sent_to_retry,d4e6578e-9648-4333-bc3d-56f7593d05f6,Q1,Z1,Q1:zone=Z1:conf=0.5,1,6.5275,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:45:30.612170+00:00,exp_06_dlq,sent_to_retry,2f134403-ce78-4df6-9f5c-eac4a3b4e426,Q1,Z5,Q1:zone=Z5:conf=0.7,1,5.5823,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:46:21.761890+00:00,exp_06_dlq,sent_to_dlq,e1c1b7cb-c060-42a2-a98e-97d21a7913ee,Q2,Z5,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:22.781681+00:00,exp_06_dlq,sent_to_dlq,4992f0cd-4f32-4dba-8419-a86f023f5874,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:23.788321+00:00,exp_06_dlq,sent_to_dlq,4c1799d1-79a9-40f6-9293-d318803e0e4b,Q2,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:24.792942+00:00,exp_06_dlq,sent_to_dlq,6d395caa-e4db-4a7f-9cc1-375e1ddcb5de,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:25.798223+00:00,exp_06_dlq,sent_to_dlq,5122b5b5-0ce4-4f32-83d6-6df3456f39f4,Q3,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:26.803281+00:00,exp_06_dlq,sent_to_dlq,4622ea8b-ade7-4679-97eb-89e99ef82f99,Q3,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:27.809761+00:00,exp_06_dlq,sent_to_dlq,b519c3a1-6c1b-4a17-a51d-104c07dad3c6,Q3,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:28.828367+00:00,exp_06_dlq,sent_to_dlq,98e8c446-cd7b-469a-aa4f-36b96029b214,Q1,Z5,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:29.854370+00:00,exp_06_dlq,sent_to_dlq,79a26b05-6a70-412b-ad5a-669088cee187,Q4,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:30.863246+00:00,exp_06_dlq,sent_to_dlq,def9f3da-34cf-44b7-af24-0f5e59566443,Q1,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:31.868743+00:00,exp_06_dlq,sent_to_dlq,362647a7-2d31-4124-b6ac-ea392d9ebbc3,Q1,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:32.878244+00:00,exp_06_dlq,sent_to_dlq,7705aafd-3169-4237-a047-d7f3919280e8,Q2,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:33.883562+00:00,exp_06_dlq,sent_to_dlq,766356a8-b3d8-4776-a046-21d0f8410aaa,Q1,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:34.890761+00:00,exp_06_dlq,sent_to_dlq,4557ee0c-02df-4b62-9a53-381fa187d580,Q4,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:35.898876+00:00,exp_06_dlq,sent_to_dlq,62557ce9-ca4d-422d-8dbd-77c4153724f1,Q3,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:36.910443+00:00,exp_06_dlq,sent_to_dlq,7560fe64-1439-4ec1-ac06-969906d8f945,Q3,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:37.918910+00:00,exp_06_dlq,sent_to_dlq,6f9555fb-5f94-46ea-9d5a-11f827edf1bd,Q5,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:38.926321+00:00,exp_06_dlq,sent_to_dlq,13c6e0be-7c6f-44ca-8fc6-27ee88c5ac8b,Q1,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:39.935791+00:00,exp_06_dlq,sent_to_dlq,5b350a80-fc3a-47a5-ae1b-1aa3cd6d70ca,Q1,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:40.944753+00:00,exp_06_dlq,sent_to_dlq,88a1497d-466e-4e61-aa05-cecab32238f7,Q3,Z3,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:41.959551+00:00,exp_06_dlq,sent_to_dlq,56bc9778-9abe-42af-ad5b-e0f037317fe2,Q1,Z5,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:42.965360+00:00,exp_06_dlq,sent_to_dlq,3a463462-b63e-436b-9141-16805c873914,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:43.970897+00:00,exp_06_dlq,sent_to_dlq,488bcb07-0fd7-480d-a1dd-c5ac58e363fa,Q1,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:44.978172+00:00,exp_06_dlq,sent_to_dlq,17987e33-8628-4577-82dc-c8e17a90059e,Q2,Z5,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:45.983564+00:00,exp_06_dlq,sent_to_dlq,e678c22b-a760-4ccb-953b-67cc2f656f8f,Q2,Z5,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:46.990786+00:00,exp_06_dlq,sent_to_dlq,d316d1ff-c3e1-40f0-bc00-eaae88a0a52c,Q2,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:48.001635+00:00,exp_06_dlq,sent_to_dlq,c0afbdf0-358e-478b-aab7-fcb64557cedd,Q2,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:49.010891+00:00,exp_06_dlq,sent_to_dlq,62c238b8-0d63-4e9a-8df8-bdb3a56f6794,Q5,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:50.017778+00:00,exp_06_dlq,sent_to_dlq,f027741b-e5f6-4320-9e71-d8e3b672afa5,Q1,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:51.026395+00:00,exp_06_dlq,sent_to_dlq,a8ced016-7445-45d4-8388-7038287d9e32,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:52.033692+00:00,exp_06_dlq,sent_to_dlq,d2a9e17b-d7c5-4174-96c6-3013e66efe72,Q1,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:53.041787+00:00,exp_06_dlq,sent_to_dlq,2cbb2ea2-951c-4931-8a6b-80cf31e97d8b,Q1,Z3,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:54.051746+00:00,exp_06_dlq,sent_to_dlq,c9e1202f-4880-497f-b82f-91184f858f86,Q1,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:55.058020+00:00,exp_06_dlq,sent_to_dlq,1e4ea356-8352-428c-943b-d3dc2bec7253,Q5,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:56.062559+00:00,exp_06_dlq,sent_to_dlq,a6510210-7f5f-4ccc-8a7b-1933092ac269,Q1,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:57.070642+00:00,exp_06_dlq,sent_to_dlq,c89fcbf4-d425-4894-ab60-74615719210e,Q3,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:58.077717+00:00,exp_06_dlq,sent_to_dlq,8ff02235-8a07-467c-b20c-7e83f352e431,Q4,Z5,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:46:59.087795+00:00,exp_06_dlq,sent_to_dlq,6a086ac0-1734-4c6e-8cd8-5d3cd9c44269,Q1,Z4,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:00.096063+00:00,exp_06_dlq,sent_to_dlq,fd731a2c-d7a4-40a2-b4de-4b3261a47d4a,Q3,Z3,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:01.102087+00:00,exp_06_dlq,sent_to_dlq,90b2c4ee-c8fb-4ae1-83bf-1e298f288078,Q5,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:02.109558+00:00,exp_06_dlq,sent_to_dlq,b3087dee-cc06-451c-b6c1-f07c45f1e72b,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:03.117790+00:00,exp_06_dlq,sent_to_dlq,42a6f38b-9166-497e-a353-b83b315cf2ce,Q3,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:04.123765+00:00,exp_06_dlq,sent_to_dlq,88d29205-9ba1-4fd4-9848-daeb50506d42,Q5,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:05.129277+00:00,exp_06_dlq,sent_to_dlq,1bc2d688-5a19-4adb-92b9-787361570336,Q2,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:06.135241+00:00,exp_06_dlq,sent_to_dlq,375f2b43-df94-4452-b0dd-9ba8cf32409d,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:07.141826+00:00,exp_06_dlq,sent_to_dlq,721e4361-7799-447c-919e-b152c7b8abf5,Q3,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:08.148271+00:00,exp_06_dlq,sent_to_dlq,e452bf18-0ea8-4caa-a20b-3c5012b49b27,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:09.154929+00:00,exp_06_dlq,sent_to_dlq,95b272ef-5d66-4353-b6cd-52f803873241,Q3,Z2,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:10.160222+00:00,exp_06_dlq,sent_to_dlq,d4e6578e-9648-4333-bc3d-56f7593d05f6,Q1,Z1,,3,,dlq-topic,failed,Falla durante reintento
+2026-06-04T02:47:11.168417+00:00,exp_06_dlq,sent_to_dlq,2f134403-ce78-4df6-9f5c-eac4a3b4e426,Q1,Z5,,3,,dlq-topic,failed,Falla durante reintento

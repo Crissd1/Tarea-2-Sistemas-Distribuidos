@@ -1,0 +1,2 @@
+experiment_name,total_events,total_queries,successful_events,failed_events,cache_hits,cache_miss_processed,sent_to_retry,recovered_from_retry,elapsed_seconds,throughput_events_per_second,throughput_successful_queries_per_second,latency_avg_ms,latency_p50_ms,latency_p95_ms,retry_rate,recovery_rate,sent_to_dlq,dlq_count,dlq_rate,failure_rate
+exp_02_zipf_1consumer,1000,1000,1000,0,903,97,0,0,6.7142,148.9373,148.9373,6.0192,3.8586,9.5056,0.0,0.0,0,0,0.0,0.0

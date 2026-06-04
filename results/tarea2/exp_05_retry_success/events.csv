@@ -1,0 +1,101 @@
+timestamp,experiment_name,event_type,query_id,query_type,zone,cache_key,retry_count,latency_ms,topic,status,error
+2026-06-04T02:38:47.682070+00:00,exp_05_retry_success,sent_to_retry,0cf0de3d-8080-45a9-950c-ab0e0f9ed167,Q2,Z1,Q2:zone=Z1:conf=0.0,1,30.7728,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.712201+00:00,exp_05_retry_success,sent_to_retry,3c2c677d-8031-4dd3-8c5b-c5ac2154c758,Q1,Z1,Q1:zone=Z1:conf=0.0,1,11.5961,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.720869+00:00,exp_05_retry_success,sent_to_retry,bb34ef51-e841-48b1-af31-8bc3ec288e6b,Q3,Z1,Q3:zone=Z1:conf=0.7,1,8.0433,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.727859+00:00,exp_05_retry_success,sent_to_retry,a38a1389-7f31-4919-983d-8606973e98a1,Q2,Z4,Q2:zone=Z4:conf=0.7,1,6.5884,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.735695+00:00,exp_05_retry_success,sent_to_retry,c0e94cec-e224-4883-a301-38cb05903fc1,Q2,Z1,Q2:zone=Z1:conf=0.7,1,6.6371,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.746636+00:00,exp_05_retry_success,sent_to_retry,ff424d4a-a367-4620-b2a6-b80dd979ecb4,Q1,Z4,Q1:zone=Z4:conf=0.7,1,10.0747,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.755315+00:00,exp_05_retry_success,sent_to_retry,ef7a7149-2e9c-45ce-bef6-eeb89e0d82fd,Q4,Z2,Q4:zone=Z2:zone_b=Z5:conf=0.5,1,8.1347,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.762188+00:00,exp_05_retry_success,sent_to_retry,2b143f91-da2f-4357-8107-5883d06a1560,Q1,Z1,Q1:zone=Z1:conf=0.7,1,6.2412,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.777199+00:00,exp_05_retry_success,sent_to_retry,01395276-2846-4014-8155-7dbfe0ab2b1e,Q3,Z1,Q3:zone=Z1:conf=0.5,1,14.7114,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.784774+00:00,exp_05_retry_success,sent_to_retry,2d223f3e-8d5b-4ef3-abed-f964ceac7d67,Q1,Z5,Q1:zone=Z5:conf=0.7,1,7.2933,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.797649+00:00,exp_05_retry_success,sent_to_retry,7c372d82-4924-4933-b0c4-68eda8498f48,Q2,Z3,Q2:zone=Z3:conf=0.0,1,12.0041,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.805013+00:00,exp_05_retry_success,sent_to_retry,8d025807-4781-4338-a014-3cca4903a332,Q4,Z1,Q4:zone=Z1:zone_b=Z5:conf=0.5,1,6.8607,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.813375+00:00,exp_05_retry_success,sent_to_retry,22af1d37-c93c-486a-ac53-055ed9011b71,Q3,Z3,Q3:zone=Z3:conf=0.7,1,7.9179,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.825424+00:00,exp_05_retry_success,sent_to_retry,86d40986-8025-4d4e-9835-840556ddfeb5,Q3,Z1,Q3:zone=Z1:conf=0.7,1,11.6441,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.832486+00:00,exp_05_retry_success,sent_to_retry,f679fe63-6096-457f-9f30-9e6ab3894061,Q1,Z1,Q1:zone=Z1:conf=0.7,1,6.7107,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.839292+00:00,exp_05_retry_success,sent_to_retry,35bbf338-8b76-4ce2-af74-1cef9d72d97a,Q1,Z3,Q1:zone=Z3:conf=0.0,1,6.4779,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.845107+00:00,exp_05_retry_success,sent_to_retry,3b2292b3-3a42-49c5-a9da-413926526551,Q1,Z4,Q1:zone=Z4:conf=0.7,1,5.475,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.850629+00:00,exp_05_retry_success,sent_to_retry,0b385e72-f40a-4037-9048-2900a0ab46c4,Q1,Z1,Q1:zone=Z1:conf=0.0,1,5.2085,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.856386+00:00,exp_05_retry_success,sent_to_retry,f3e725f9-1156-48d8-9361-90b20ae36a42,Q3,Z1,Q3:zone=Z1:conf=0.5,1,5.4378,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.863049+00:00,exp_05_retry_success,sent_to_retry,68d1c427-47e8-4a78-a43a-3a1113335b88,Q2,Z4,Q2:zone=Z4:conf=0.0,1,6.3291,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.869641+00:00,exp_05_retry_success,sent_to_retry,77f6f0f5-2f05-43c9-8338-34a86913563f,Q2,Z3,Q2:zone=Z3:conf=0.7,1,6.2602,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.876981+00:00,exp_05_retry_success,sent_to_retry,cf27b765-0a0e-408f-8f47-499ea754aefa,Q5,Z4,Q5:zone=Z4:bins=5,1,6.8603,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.887408+00:00,exp_05_retry_success,sent_to_retry,57d27831-85c9-4b53-806c-f302530bcac6,Q4,Z3,Q4:zone=Z3:zone_b=Z1:conf=0.5,1,10.0041,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.895069+00:00,exp_05_retry_success,sent_to_retry,222f99fd-741d-4db1-be17-8d261000f06e,Q3,Z5,Q3:zone=Z5:conf=0.5,1,7.3428,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.904443+00:00,exp_05_retry_success,sent_to_retry,b78c51c2-645a-4e65-bb22-cce52dd5d591,Q1,Z1,Q1:zone=Z1:conf=0.7,1,8.4108,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.912231+00:00,exp_05_retry_success,sent_to_retry,d1094012-5a6b-425a-be01-28381cae0f88,Q5,Z2,Q5:zone=Z2:bins=5,1,6.7579,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.919921+00:00,exp_05_retry_success,sent_to_retry,fa2835c8-0c4c-47b3-b1c7-ca5faab5a097,Q4,Z1,Q4:zone=Z1:zone_b=Z2:conf=0.0,1,7.2845,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.925847+00:00,exp_05_retry_success,sent_to_retry,dac9b65d-3cd0-4396-b149-72c68e4178ae,Q1,Z2,Q1:zone=Z2:conf=0.7,1,4.916,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.931654+00:00,exp_05_retry_success,sent_to_retry,7becd700-ad40-46f1-9103-464c5f27b8de,Q1,Z5,Q1:zone=Z5:conf=0.5,1,5.2991,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.955426+00:00,exp_05_retry_success,sent_to_retry,c1f1a897-9159-4c87-98ec-56d35165be0f,Q2,Z2,Q2:zone=Z2:conf=0.0,1,12.0113,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.961373+00:00,exp_05_retry_success,sent_to_retry,041ebe75-d87a-4080-aff0-2b91d653a7d2,Q3,Z1,Q3:zone=Z1:conf=0.7,1,5.2499,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.966732+00:00,exp_05_retry_success,sent_to_retry,7d38f008-e5ab-4af8-9733-a229988e2790,Q1,Z5,Q1:zone=Z5:conf=0.0,1,4.7565,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.973249+00:00,exp_05_retry_success,sent_to_retry,ee77df80-018e-4a77-84ec-8159b3c288c2,Q1,Z2,Q1:zone=Z2:conf=0.7,1,5.6928,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.979941+00:00,exp_05_retry_success,sent_to_retry,a6d45627-0275-48e7-b322-19f13b729a79,Q1,Z1,Q1:zone=Z1:conf=0.7,1,5.7604,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.986220+00:00,exp_05_retry_success,sent_to_retry,fc65a1ea-2603-4c50-8865-ac99b667089d,Q1,Z2,Q1:zone=Z2:conf=0.7,1,5.3213,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:47.992153+00:00,exp_05_retry_success,sent_to_retry,6b244182-e446-4a0f-8684-254de4ae644e,Q4,Z3,Q4:zone=Z3:zone_b=Z4:conf=0.0,1,5.3162,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.002101+00:00,exp_05_retry_success,sent_to_retry,bd82d4e9-b74b-49f5-a3d4-82396281ac67,Q3,Z5,Q3:zone=Z5:conf=0.5,1,8.7832,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.035162+00:00,exp_05_retry_success,sent_to_retry,2988b989-9c0e-409c-a655-69b83707ae6f,Q3,Z1,Q3:zone=Z1:conf=0.7,1,29.6403,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.045743+00:00,exp_05_retry_success,sent_to_retry,c8e5b449-7954-40f8-8019-43c80dd1acb4,Q3,Z1,Q3:zone=Z1:conf=0.7,1,9.9407,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.054048+00:00,exp_05_retry_success,sent_to_retry,1ff582f5-09c3-4a61-b4ee-f43bd3a9c6fc,Q3,Z3,Q3:zone=Z3:conf=0.7,1,7.3017,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.064122+00:00,exp_05_retry_success,sent_to_retry,97d3f3b7-b3d0-4649-b3f6-d736738f417a,Q1,Z2,Q1:zone=Z2:conf=0.5,1,9.4671,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.072433+00:00,exp_05_retry_success,sent_to_retry,c8845651-6d69-4bdc-aac5-7656bd31f8f6,Q1,Z1,Q1:zone=Z1:conf=0.0,1,6.481,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.079563+00:00,exp_05_retry_success,sent_to_retry,0488e47a-072d-441b-8909-0587896a8f7c,Q3,Z3,Q3:zone=Z3:conf=0.7,1,5.5057,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.085617+00:00,exp_05_retry_success,sent_to_retry,706ec284-e274-4143-a352-1d8cc88164d1,Q1,Z2,Q1:zone=Z2:conf=0.7,1,5.2598,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.092760+00:00,exp_05_retry_success,sent_to_retry,4fb94065-2a17-42ba-bd69-33e7ab0be5f2,Q2,Z1,Q2:zone=Z1:conf=0.0,1,6.2157,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.098889+00:00,exp_05_retry_success,sent_to_retry,c4c5e8c0-5098-484a-83d7-50bd8d6e2155,Q2,Z1,Q2:zone=Z1:conf=0.7,1,5.3214,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.105564+00:00,exp_05_retry_success,sent_to_retry,890a431f-fc84-4bc9-a514-23ae27622b86,Q3,Z1,Q3:zone=Z1:conf=0.0,1,5.7334,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.111386+00:00,exp_05_retry_success,sent_to_retry,957bc10a-6c2a-4f64-b5d0-972172b476b4,Q1,Z2,Q1:zone=Z2:conf=0.7,1,4.7436,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.118220+00:00,exp_05_retry_success,sent_to_retry,1d5448d1-59dc-4a8e-8d4d-c3a4768ee6fd,Q4,Z2,Q4:zone=Z2:zone_b=Z4:conf=0.5,1,5.4891,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.124887+00:00,exp_05_retry_success,sent_to_retry,2526afb7-40e4-4641-b843-ba7001afe96d,Q1,Z1,Q1:zone=Z1:conf=0.7,1,5.4999,retry-topic,failed,Falla del Generador de Respuestas
+2026-06-04T02:38:48.856086+00:00,exp_05_retry_success,recovered_from_retry,0cf0de3d-8080-45a9-950c-ab0e0f9ed167,Q2,Z1,Q2:zone=Z1:conf=0.0,1,1174.5849,retry-topic,success,
+2026-06-04T02:38:49.871463+00:00,exp_05_retry_success,recovered_from_retry,3c2c677d-8031-4dd3-8c5b-c5ac2154c758,Q1,Z1,Q1:zone=Z1:conf=0.0,1,1005.6354,retry-topic,success,
+2026-06-04T02:38:50.878322+00:00,exp_05_retry_success,recovered_from_retry,bb34ef51-e841-48b1-af31-8bc3ec288e6b,Q3,Z1,Q3:zone=Z1:conf=0.7,1,1006.5821,retry-topic,success,
+2026-06-04T02:38:51.898159+00:00,exp_05_retry_success,recovered_from_retry,a38a1389-7f31-4919-983d-8606973e98a1,Q2,Z4,Q2:zone=Z4:conf=0.7,1,1018.9395,retry-topic,success,
+2026-06-04T02:38:52.907365+00:00,exp_05_retry_success,recovered_from_retry,c0e94cec-e224-4883-a301-38cb05903fc1,Q2,Z1,Q2:zone=Z1:conf=0.7,1,1007.2316,retry-topic,success,
+2026-06-04T02:38:53.916016+00:00,exp_05_retry_success,recovered_from_retry,ff424d4a-a367-4620-b2a6-b80dd979ecb4,Q1,Z4,Q1:zone=Z4:conf=0.7,1,1008.3407,retry-topic,success,
+2026-06-04T02:38:54.926987+00:00,exp_05_retry_success,recovered_from_retry,ef7a7149-2e9c-45ce-bef6-eeb89e0d82fd,Q4,Z2,Q4:zone=Z2:zone_b=Z5:conf=0.5,1,1010.4417,retry-topic,success,
+2026-06-04T02:38:55.932952+00:00,exp_05_retry_success,recovered_from_retry,2b143f91-da2f-4357-8107-5883d06a1560,Q1,Z1,Q1:zone=Z1:conf=0.7,1,1005.6672,retry-topic,success,
+2026-06-04T02:38:56.950455+00:00,exp_05_retry_success,recovered_from_retry,01395276-2846-4014-8155-7dbfe0ab2b1e,Q3,Z1,Q3:zone=Z1:conf=0.5,1,1016.8148,retry-topic,success,
+2026-06-04T02:38:57.959212+00:00,exp_05_retry_success,recovered_from_retry,2d223f3e-8d5b-4ef3-abed-f964ceac7d67,Q1,Z5,Q1:zone=Z5:conf=0.7,1,1006.6722,retry-topic,success,
+2026-06-04T02:38:58.969941+00:00,exp_05_retry_success,recovered_from_retry,7c372d82-4924-4933-b0c4-68eda8498f48,Q2,Z3,Q2:zone=Z3:conf=0.0,1,1010.091,retry-topic,success,
+2026-06-04T02:38:59.986387+00:00,exp_05_retry_success,recovered_from_retry,8d025807-4781-4338-a014-3cca4903a332,Q4,Z1,Q4:zone=Z1:zone_b=Z5:conf=0.5,1,1014.4302,retry-topic,success,
+2026-06-04T02:39:00.995967+00:00,exp_05_retry_success,recovered_from_retry,c1f1a897-9159-4c87-98ec-56d35165be0f,Q2,Z2,Q2:zone=Z2:conf=0.0,1,1008.0833,retry-topic,success,
+2026-06-04T02:39:02.003339+00:00,exp_05_retry_success,recovered_from_retry,041ebe75-d87a-4080-aff0-2b91d653a7d2,Q3,Z1,Q3:zone=Z1:conf=0.7,1,1006.7148,retry-topic,success,
+2026-06-04T02:39:03.007871+00:00,exp_05_retry_success,recovered_from_retry,7d38f008-e5ab-4af8-9733-a229988e2790,Q1,Z5,Q1:zone=Z5:conf=0.0,1,1004.2172,retry-topic,success,
+2026-06-04T02:39:04.014272+00:00,exp_05_retry_success,recovered_from_retry,ee77df80-018e-4a77-84ec-8159b3c288c2,Q1,Z2,Q1:zone=Z2:conf=0.7,1,1006.0376,retry-topic,success,
+2026-06-04T02:39:05.021216+00:00,exp_05_retry_success,recovered_from_retry,22af1d37-c93c-486a-ac53-055ed9011b71,Q3,Z3,Q3:zone=Z3:conf=0.7,1,1006.6635,retry-topic,success,
+2026-06-04T02:39:06.026991+00:00,exp_05_retry_success,recovered_from_retry,86d40986-8025-4d4e-9835-840556ddfeb5,Q3,Z1,Q3:zone=Z1:conf=0.7,1,1005.4769,retry-topic,success,
+2026-06-04T02:39:07.034927+00:00,exp_05_retry_success,recovered_from_retry,a6d45627-0275-48e7-b322-19f13b729a79,Q1,Z1,Q1:zone=Z1:conf=0.7,1,1007.5919,retry-topic,success,
+2026-06-04T02:39:08.041818+00:00,exp_05_retry_success,recovered_from_retry,fc65a1ea-2603-4c50-8865-ac99b667089d,Q1,Z2,Q1:zone=Z2:conf=0.7,1,1006.4083,retry-topic,success,
+2026-06-04T02:39:09.050697+00:00,exp_05_retry_success,recovered_from_retry,6b244182-e446-4a0f-8684-254de4ae644e,Q4,Z3,Q4:zone=Z3:zone_b=Z4:conf=0.0,1,1008.4262,retry-topic,success,
+2026-06-04T02:39:10.059953+00:00,exp_05_retry_success,recovered_from_retry,bd82d4e9-b74b-49f5-a3d4-82396281ac67,Q3,Z5,Q3:zone=Z5:conf=0.5,1,1008.7334,retry-topic,success,
+2026-06-04T02:39:11.069084+00:00,exp_05_retry_success,recovered_from_retry,2988b989-9c0e-409c-a655-69b83707ae6f,Q3,Z1,Q3:zone=Z1:conf=0.7,1,1008.5705,retry-topic,success,
+2026-06-04T02:39:12.081697+00:00,exp_05_retry_success,recovered_from_retry,c8e5b449-7954-40f8-8019-43c80dd1acb4,Q3,Z1,Q3:zone=Z1:conf=0.7,1,1012.1946,retry-topic,success,
+2026-06-04T02:39:13.089266+00:00,exp_05_retry_success,recovered_from_retry,f679fe63-6096-457f-9f30-9e6ab3894061,Q1,Z1,Q1:zone=Z1:conf=0.7,1,1006.8439,retry-topic,success,
+2026-06-04T02:39:14.096570+00:00,exp_05_retry_success,recovered_from_retry,35bbf338-8b76-4ce2-af74-1cef9d72d97a,Q1,Z3,Q1:zone=Z3:conf=0.0,1,1006.0913,retry-topic,success,
+2026-06-04T02:39:15.103968+00:00,exp_05_retry_success,recovered_from_retry,3b2292b3-3a42-49c5-a9da-413926526551,Q1,Z4,Q1:zone=Z4:conf=0.7,1,1007.0942,retry-topic,success,
+2026-06-04T02:39:16.109259+00:00,exp_05_retry_success,recovered_from_retry,0b385e72-f40a-4037-9048-2900a0ab46c4,Q1,Z1,Q1:zone=Z1:conf=0.0,1,1005.0238,retry-topic,success,
+2026-06-04T02:39:17.115030+00:00,exp_05_retry_success,recovered_from_retry,f3e725f9-1156-48d8-9361-90b20ae36a42,Q3,Z1,Q3:zone=Z1:conf=0.5,1,1005.4823,retry-topic,success,
+2026-06-04T02:39:18.122364+00:00,exp_05_retry_success,recovered_from_retry,68d1c427-47e8-4a78-a43a-3a1113335b88,Q2,Z4,Q2:zone=Z4:conf=0.0,1,1006.9816,retry-topic,success,
+2026-06-04T02:39:19.129154+00:00,exp_05_retry_success,recovered_from_retry,77f6f0f5-2f05-43c9-8338-34a86913563f,Q2,Z3,Q2:zone=Z3:conf=0.7,1,1006.0,retry-topic,success,
+2026-06-04T02:39:20.136652+00:00,exp_05_retry_success,recovered_from_retry,cf27b765-0a0e-408f-8f47-499ea754aefa,Q5,Z4,Q5:zone=Z4:bins=5,1,1007.1291,retry-topic,success,
+2026-06-04T02:39:21.144198+00:00,exp_05_retry_success,recovered_from_retry,57d27831-85c9-4b53-806c-f302530bcac6,Q4,Z3,Q4:zone=Z3:zone_b=Z1:conf=0.5,1,1007.0337,retry-topic,success,
+2026-06-04T02:39:22.154966+00:00,exp_05_retry_success,recovered_from_retry,1ff582f5-09c3-4a61-b4ee-f43bd3a9c6fc,Q3,Z3,Q3:zone=Z3:conf=0.7,1,1010.1308,retry-topic,success,
+2026-06-04T02:39:23.170857+00:00,exp_05_retry_success,recovered_from_retry,97d3f3b7-b3d0-4649-b3f6-d736738f417a,Q1,Z2,Q1:zone=Z2:conf=0.5,1,1015.1955,retry-topic,success,
+2026-06-04T02:39:24.190398+00:00,exp_05_retry_success,recovered_from_retry,c8845651-6d69-4bdc-aac5-7656bd31f8f6,Q1,Z1,Q1:zone=Z1:conf=0.0,1,1018.3145,retry-topic,success,
+2026-06-04T02:39:25.201264+00:00,exp_05_retry_success,recovered_from_retry,0488e47a-072d-441b-8909-0587896a8f7c,Q3,Z3,Q3:zone=Z3:conf=0.7,1,1009.7008,retry-topic,success,
+2026-06-04T02:39:26.209192+00:00,exp_05_retry_success,recovered_from_retry,706ec284-e274-4143-a352-1d8cc88164d1,Q1,Z2,Q1:zone=Z2:conf=0.7,1,1006.8382,retry-topic,success,
+2026-06-04T02:39:27.226175+00:00,exp_05_retry_success,recovered_from_retry,222f99fd-741d-4db1-be17-8d261000f06e,Q3,Z5,Q3:zone=Z5:conf=0.5,1,1016.2815,retry-topic,success,
+2026-06-04T02:39:28.240716+00:00,exp_05_retry_success,recovered_from_retry,b78c51c2-645a-4e65-bb22-cce52dd5d591,Q1,Z1,Q1:zone=Z1:conf=0.7,1,1011.7188,retry-topic,success,
+2026-06-04T02:39:29.256342+00:00,exp_05_retry_success,recovered_from_retry,d1094012-5a6b-425a-be01-28381cae0f88,Q5,Z2,Q5:zone=Z2:bins=5,1,1015.0965,retry-topic,success,
+2026-06-04T02:39:30.276334+00:00,exp_05_retry_success,recovered_from_retry,fa2835c8-0c4c-47b3-b1c7-ca5faab5a097,Q4,Z1,Q4:zone=Z1:zone_b=Z2:conf=0.0,1,1017.1688,retry-topic,success,
+2026-06-04T02:39:31.287502+00:00,exp_05_retry_success,recovered_from_retry,dac9b65d-3cd0-4396-b149-72c68e4178ae,Q1,Z2,Q1:zone=Z2:conf=0.7,1,1009.7377,retry-topic,success,
+2026-06-04T02:39:32.299980+00:00,exp_05_retry_success,recovered_from_retry,7becd700-ad40-46f1-9103-464c5f27b8de,Q1,Z5,Q1:zone=Z5:conf=0.5,1,1011.9507,retry-topic,success,
+2026-06-04T02:39:33.307462+00:00,exp_05_retry_success,recovered_from_retry,4fb94065-2a17-42ba-bd69-33e7ab0be5f2,Q2,Z1,Q2:zone=Z1:conf=0.0,1,1006.991,retry-topic,success,
+2026-06-04T02:39:34.313658+00:00,exp_05_retry_success,recovered_from_retry,c4c5e8c0-5098-484a-83d7-50bd8d6e2155,Q2,Z1,Q2:zone=Z1:conf=0.7,1,1005.1266,retry-topic,success,
+2026-06-04T02:39:35.324368+00:00,exp_05_retry_success,recovered_from_retry,890a431f-fc84-4bc9-a514-23ae27622b86,Q3,Z1,Q3:zone=Z1:conf=0.0,1,1010.1544,retry-topic,success,
+2026-06-04T02:39:36.334187+00:00,exp_05_retry_success,recovered_from_retry,957bc10a-6c2a-4f64-b5d0-972172b476b4,Q1,Z2,Q1:zone=Z2:conf=0.7,1,1008.2628,retry-topic,success,
+2026-06-04T02:39:37.340279+00:00,exp_05_retry_success,recovered_from_retry,1d5448d1-59dc-4a8e-8d4d-c3a4768ee6fd,Q4,Z2,Q4:zone=Z2:zone_b=Z4:conf=0.5,1,1005.7806,retry-topic,success,
+2026-06-04T02:39:38.346419+00:00,exp_05_retry_success,recovered_from_retry,2526afb7-40e4-4641-b843-ba7001afe96d,Q1,Z1,Q1:zone=Z1:conf=0.7,1,1005.2958,retry-topic,success,

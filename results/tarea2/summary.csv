@@ -1,0 +1,2 @@
+total_events,total_queries,successful_events,failed_events,cache_hits,cache_miss_processed,sent_to_retry,recovered_from_retry,sent_to_dlq,elapsed_seconds,throughput_events_per_second,throughput_successful_queries_per_second,latency_avg_ms,latency_p50_ms,latency_p95_ms,retry_rate,recovery_rate,dlq_rate,failure_rate
+20,20,20,0,4,16,0,0,0,1.4612,13.6874,13.6874,31.4288,8.8889,229.7328,0.0,0.0,0.0,0.0
